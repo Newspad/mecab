@@ -1,14 +1,14 @@
 //
-//  Node.m
+//  MeCabNode.m
 //
 //  Created by Watanabe Toshinori on 10/12/22.
 //  Copyright 2010 FLCL.jp. All rights reserved.
 //
 
-#import "Node.h"
+#import "MeCabNode.h"
 
 
-@implementation Node
+@implementation MeCabNode
 
 @synthesize surface;
 @synthesize feature;

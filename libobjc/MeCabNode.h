@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Node : NSObject {
+@interface MeCabNode : NSObject {
 	
 	NSString *surface;
 	NSString *feature;
