@@ -10,29 +10,41 @@
 	<string>mecab</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>581D7565-A04A-4181-AC62-F9B3F73DA01E</key>
-		<string>ssh://github.com/Newspad/mecab.git</string>
+		<key>2FFB8EE31713E1ACBB608BC80298D11E0B768DA7</key>
+		<string>git.gumob.net:gumob/pj-newspad.git</string>
+		<key>423CC2F53BA7CEB7ECDC504E1CC13A4C07CFAA35</key>
+		<string>github.com:Newspad/mecab.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mecab/mecab.xcodeproj/project.xcworkspace</string>
+	<string>mecab/mecab.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>581D7565-A04A-4181-AC62-F9B3F73DA01E</key>
+		<key>2FFB8EE31713E1ACBB608BC80298D11E0B768DA7</key>
+		<string>../../../../../../..</string>
+		<key>423CC2F53BA7CEB7ECDC504E1CC13A4C07CFAA35</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/Newspad/mecab.git</string>
+	<string>github.com:Newspad/mecab.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>581D7565-A04A-4181-AC62-F9B3F73DA01E</string>
+	<string>423CC2F53BA7CEB7ECDC504E1CC13A4C07CFAA35</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>581D7565-A04A-4181-AC62-F9B3F73DA01E</string>
+			<string>2FFB8EE31713E1ACBB608BC80298D11E0B768DA7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>423CC2F53BA7CEB7ECDC504E1CC13A4C07CFAA35</string>
 			<key>IDESourceControlWCCName</key>
 			<string>mecab</string>
 		</dict>
