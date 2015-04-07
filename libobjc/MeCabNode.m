@@ -16,11 +16,10 @@
 
 - (void)setFeature:(NSString *)value {
 	if (feature) {
-		[feature release];
+        feature = nil;
 	}
-	
 	if (value) {
-		feature = [value retain];
+		feature = value;
 		self.features = [value componentsSeparatedByString:@","];
 	} else {
 		feature = nil;
@@ -32,63 +31,63 @@
 	if (!features || [features count] < 1) {
 		return nil;
 	}
-	return [features objectAtIndex:0];
+	return features[0];
 }
 
 - (NSString *)partOfSpeechSubtype1 {
 	if (!features || [features count] < 2) {
 		return nil;
 	}
-	return [features objectAtIndex:1];
+	return features[1];
 }
 
 - (NSString *)partOfSpeechSubtype2 {
 	if (!features || [features count] < 3) {
 		return nil;
 	}
-	return [features objectAtIndex:2];
+	return features[2];
 }
 
 - (NSString *)partOfSpeechSubtype3 {
 	if (!features || [features count] < 4) {
 		return nil;
 	}
-	return [features objectAtIndex:3];
+	return features[3];
 }
 
 - (NSString *)inflection {
 	if (!features || [features count] < 5) {
 		return nil;
 	}
-	return [features objectAtIndex:4];
+	return features[4];
 }
 
 - (NSString *)useOfType {
 	if (!features || [features count] < 6) {
 		return nil;
 	}
-	return [features objectAtIndex:5];
+	return features[5];
 }
 
 - (NSString *)originalForm {
 	if (!features || [features count] < 7) {
 		return nil;
 	}
-	return [features objectAtIndex:6];
+	return features[6];
 }
 
 - (NSString *)reading {
 	if (!features || [features count] < 8) {
 		return nil;
 	}
-	return [features objectAtIndex:7];
+	return features[7];
 }
 
 - (NSString *)pronunciation {
 	if (!features || [features count] < 9) {
 		return nil;
 	}
-	return [features objectAtIndex:8];
+	return features[8];
 }
 
 - (void)dealloc {
@@ -96,7 +95,6 @@
 	self.feature = nil;
     self.features = nil;
 
-	[super dealloc];
 }
 
 @end

@@ -12,7 +12,6 @@
 	
 	NSString *surface;
 	NSString *feature;
-	
 	NSArray *features;
 
 }

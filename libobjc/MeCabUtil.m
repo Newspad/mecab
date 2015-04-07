@@ -21,13 +21,13 @@
 		
 #if TARGET_IPHONE_SIMULATOR
 		// Homebrew mecab path
-//		NSString *path = @"/usr/local/Cellar/mecab/0.996/lib/mecab/dic/ipadic";
-		NSString *path = @"/usr/local/mecab/lib/mecab/dic/ipadic/";
+		NSString *path = @"/usr/local/Cellar/mecab/0.996/lib/mecab/dic/ipadic";
+//		NSString *path = @"/usr/local/mecab/lib/mecab/dic/ipadic/";
 #else
-		NSString *path = [[NSBundle mainBundle] resourcePath];
+		NSString *path = NSBundle.mainBundle.resourcePath;
 #endif
-		
-		mecab = mecab_new2([[@"-d " stringByAppendingString:path] UTF8String]);
+		path = [@"-d " stringByAppendingString:path];
+		mecab = mecab_new2(path.UTF8String);
 
 		if (mecab == NULL) {
 			fprintf(stderr, "error in mecab_new2: %s\n", mecab_strerror(NULL));
@@ -52,10 +52,9 @@
 	for (; node->next != NULL; node = node->next) {
 
 		MeCabNode *newNode = [MeCabNode new];
-		newNode.surface = [[[NSString alloc] initWithBytes:node->surface length:node->length encoding:NSUTF8StringEncoding] autorelease];
+		newNode.surface = [[NSString alloc] initWithBytes:node->surface length:node->length encoding:NSUTF8StringEncoding];
 		newNode.feature = [NSString stringWithCString:node->feature encoding:NSUTF8StringEncoding];
 		[newNodes addObject:newNode];
-		[newNode release];
 	}
 	
 	return [NSArray arrayWithArray:newNodes];
@@ -65,8 +64,6 @@
 	if (mecab != NULL) {
 		mecab_destroy(mecab);
 	}
-
-	[super dealloc];
 }
 
 @end
